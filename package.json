@@ -45,8 +45,8 @@
     "lint": "eslint .",
     "test": "mocha ./test/test*.js --reporter spec",
     "test-coverage": "istanbul cover ./node_modules/.bin/_mocha -- test/test.js test/test-ratelimit.js --reporter spec",
-    "start": "node server.js",
-    "start:secure": "cross-env KEY=corsanywhere-key.pem CERT=corsanywhere-cert.crt VERIFY_SSL=false node server.js",
+    "start": "cross-env PORT=4201 node server.js",
+    "start:secure": "cross-env PORT=4202 KEY=corsanywhere-key.pem CERT=corsanywhere-cert.crt VERIFY_SSL=false node server.js",
     "generate-cert": "openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout corsanywhere-key.pem -out corsanywhere-cert.crt -config generate-cert.cnf"
   },
   "engines": {
