@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.6",
+    "cross-env": "^7.0.3",
     "eslint": "^2.2.0",
     "istanbul": "^0.4.2",
     "lolex": "^1.5.0",
@@ -43,7 +44,10 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha ./test/test*.js --reporter spec",
-    "test-coverage": "istanbul cover ./node_modules/.bin/_mocha -- test/test.js test/test-ratelimit.js --reporter spec"
+    "test-coverage": "istanbul cover ./node_modules/.bin/_mocha -- test/test.js test/test-ratelimit.js --reporter spec",
+    "start": "node server.js",
+    "start:secure": "cross-env KEY=corsanywhere-key.pem CERT=corsanywhere-cert.crt VERIFY_SSL=false node server.js",
+    "generate-cert": "openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout corsanywhere-key.pem -out corsanywhere-cert.crt -config generate-cert.cnf"
   },
   "engines": {
     "node": ">=0.10.0"
