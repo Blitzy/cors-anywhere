@@ -21,4 +21,8 @@ re-working things to run in a pure node.js environment (not deployed through Her
 | --------- | ---------- |
 | npm run start | Start up CORS Anywhere server in http mode |
 | npm run start:secure | Start up CORS Anywhere server in https mode. Will look for `corsanywhere-cert.crt` and `corsanywhere-key.pem` to setup SSL. |
-| npm run generate-cert | Generate Self signed certificates for SSL. Uses `openssl` and will the config file `generate-cert.cnf`.
+| npm run generate-cert | Generate Self signed certificates for SSL. Uses `openssl` and will the config file `generate-cert.cnf`. See note below about generating self signed certs.
+
+## Generating Self Signed Certificate
+You can use the included npm script `npm run generate-certs` to generate the key and cert files for your CORS Anywhere server.
+Make sure to modify the config file `generate-cert.cnf` to replace `<CORS_ANYWHERE_IP>` with your server's actual ip address.

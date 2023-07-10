@@ -7,3 +7,4 @@ node_modules/
 corsanywhere-key.pem
 corsanywhere-cert.crt
 corsanywhere-cert-der.crt
+corsanywhere-cert-der.cer

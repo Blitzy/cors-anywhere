@@ -48,7 +48,7 @@
     "start": "cross-env PORT=4201 node server.js",
     "start:secure": "cross-env PORT=4202 KEY=corsanywhere-key.pem CERT=corsanywhere-cert.crt VERIFY_SSL=false node server.js",
     "generate-cert": "openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout corsanywhere-key.pem -out corsanywhere-cert.crt -config generate-cert.cnf",
-    "convert-cert-der": "openssl x509 -outform der -in corsanywhere-cert.crt -out corsanywhere-cert-der.crt"
+    "convert-cert-der": "openssl x509 -outform der -in corsanywhere-cert.crt -out corsanywhere-cert-der.cer"
   },
   "engines": {
     "node": ">=0.10.0"

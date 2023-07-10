@@ -10,7 +10,7 @@ countryName = XX
 stateOrProvinceName = N/A
 localityName = N/A
 organizationName = Self-signed certificate
-commonName = 127.0.0.1: Self-signed certificate
+commonName = <CORS_ANYWHERE_IP>: Self-signed certificate
 
 [req_ext]
 subjectAltName = @alt_names
@@ -20,7 +20,4 @@ subjectAltName = @alt_names
 
 [alt_names]
 IP.1 = 127.0.0.1
-#IP.2 = <local ip 1>
-#IP.3 = <local ip 2>
-#DNS.1 = <domain 1>
-#DNS.2 = <domain 2>
+IP.2 = <CORS_ANYWHERE_IP>
